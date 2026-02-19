@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Just You</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+body{
+  margin:0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+}
+
+.card{
+  background: linear-gradient(135deg, #f3e7ff, #e3d4ff); /* soft lavender tone */
+  padding:40px;
+  border-radius:20px;
+  width:90%;
+  max-width:450px;
+  text-align:center;
+  box-shadow:0 15px 35px rgba(0,0,0,0.15);
+}
+
+h2{
+  margin-bottom:25px;
+  font-weight:500;
+  color:#5a3e5b;
+}
+
+button{
+  margin:8px;
+  padding:10px 18px;
+  border:none;
+  border-radius:25px;
+  cursor:pointer;
+  font-size:14px;
+  background: linear-gradient(135deg,#a18cd1,#fbc2eb);
+  color:white;
+  transition:0.2s;
+}
+
+button:hover{
+  opacity:0.85;
+}
+
+#response{
+  margin-top:25px;
+  font-size:14px;
+  color:#4b2e4f;
+  min-height:50px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <h2>Sometimes you feel…</h2>
+
+  <button onclick="reply(1)">I am weird</button>
+  <button onclick="reply(2)">I don't talk much</button>
+  <button onclick="reply(3)">I can't mix easily</button>
+  <button onclick="reply(4)">I say sorry too much</button>
+
+  <div id="response"></div>
+</div>
+
+<script>
+
+function reply(type){
+
+  let text = "";
+
+  if(type === 1){
+    text = "You are not weird. You just don't perform for people. That’s rare, not strange.";
+  }
+
+  if(type === 2){
+    text = "Talking less doesn’t mean less personality. Some people speak only when it matters.";
+  }
+
+  if(type === 3){
+    text = "Not mixing easily means you choose carefully. That’s strength, not weakness.";
+  }
+
+  if(type === 4){
+    text = "You don’t need to apologize for existing. Being kind is beautiful, but you deserve space too.";
+  }
+
+  document.getElementById("response").innerText = text;
+}
+
+</script>
+
+</body>
+</html>
